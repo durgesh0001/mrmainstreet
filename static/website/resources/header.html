@@ -1,0 +1,47 @@
+<!-- header -->
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="HomeCtrl as hCtrl">
+            <div class="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand">
+                            <a href="#"><h1><span>Mr. Main Street</span></h1></a>
+                        </div>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <div class="menu">
+                            <ul class="nav nav-tabs" role="tablist" ng-if="!hCtrl.isUserLogin">
+                                <li><a href="#/how-it-works"   ng-class="{active: $state.includes('howItWorks')}">How it works</a></li>
+                                <li><a href="#" ng-class="{active: $state.includes('home')}">Loan Products</a></li>
+                                <li class="apply-now call-to-action"><a href="#/apply-now"  class="btn btn-orange" title="Apply Now">Apply Now</a></li>
+                                <li class="login-btn call-to-action" ><a href="#/login"     class="btn btn-outline" title="logout">Login</a></li>
+                            </ul>
+
+                            <ul class="nav nav-tabs" role="tablist" ng-if="hCtrl.isUserLogin">
+                                <li><a href="/#/how-it-works"   ng-class="{active: $state.includes('howItWorks')}">How it works</a></li>
+                                <!--<li><a href="">Loan Products</a></li>-->
+                                <li class="user-action">
+                                    <div class="dropdown">
+                                        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <% hCtrl.loginUserName %></a>
+                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                            <li><a  href="">Profile</a></li>
+                                            <li><a  herf="" ng-click="hCtrl.logout()">Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->

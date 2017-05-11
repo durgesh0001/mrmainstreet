@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-lg-12 text-center m-t-md">
+        <div class="content" animate-panel effect="zoomIn">
+            <div class="row" ng-controller="QuestionsListCtrl as questionsData">
+                <div class="col-md-12">
+                    <div class="panel-body">
+                        <div class="m-b10 text-left"><a class="btn btn-primary m-r5" ui-sref="questions.create"
+                                                        title="Add New Question"><i aria-hidden="true"
+                                                                                    class="fa fa-plus"></i> Add New
+                            Question</a>
+                            <!-- <div class="search-area form-inline pull-right"><input type="text" name="" placeholder="search" class="form-control"><button class="btn"><i class="fa fa-search" aria-hidden="true"></i></button></div> -->
+                        </div>
+                        <div class="table-responsive">
+                            <table ng-table="questionsData.mmstreetTableParams" class="table table-bordered table-hover"
+                                   show-filter="true">
+                                <!--  <tr>
+                                     <td colspan="7">Hello</td>
+                                     <td colspan="7">Primary Questions/Answers</td>
+                                     <td colspan="2">Opt - In</td>
+                                     <td colspan="16">Qualified & Sent?</td>
+                                 </tr> -->
+
+                                <tr ng-repeat="questions in $data">
+                                    <td title="'Category'" filter="{categorytypeDisplay: 'text'}"
+                                        sortable="'categorytypeDisplay'">
+                                        {{questions.categorytypeDisplay}}
+                                    </td>
+                                    <td title="'Order'" filter="{question_order: 'text'}" sortable="'question_order'">
+                                        {{questions.question_orderDisplay}}
+                                    </td>
+                                    <td title="'Questions'" filter="{question_text: 'text'}" sortable="'question_text'">
+                                        {{questions.question_text}}
+                                    </td>
+                                    <td title="'Display Text'" filter="{display_text: 'text'}"
+                                        sortable="'display_text'">
+                                        {{questions.display_text}}
+                                    </td>
+                                    <td title="'Response Type'" width="15%" filter="{question_type: 'text'}"
+                                        sortable="'question_type'">
+                                        {{questions.question_typeDisplay}}
+                                    </td>
+                                    <td title="'Response'" filter="{responseDisplay: 'text'}"
+                                        sortable="'responseDisplay'">
+                                        {{questions.responseDisplay}}
+                                    </td>
+                                    <td title="'Status'" filter="{is_activeDisplay: 'text'}"
+                                        sortable="'is_activeDisplay'">
+                                        {{questions.is_activeDisplay}}
+                                    </td>
+                                    <td title="'Action'" align="center" nowrap="true" width="1%">
+                                        <div class="btn-group">
+                                            <a id="dLabel" href="javascript:void(0);" data-toggle="dropdown"
+                                               role="button" aria-haspopup="true" aria-expanded="true"><i
+                                                    class="fa fa-bars"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                                <!-- <li><a href="javascript:void(0)" ui-sref="questions.create" title="View"><i class="fa fa-paste"></i> View</a></li> -->
+                                                <li><a href="" ng-click="questionsData.openEditModel(questions)"
+                                                       title="Edit"><i class="fa fa-pencil"></i> Edit</a></li>
+                                                <li><a href="" ng-click="questionsData.delete(questions)"
+                                                       ng-if="questions.question_orderDisplay > 7" title="Delete"><i
+                                                        class="fa fa-trash-o"></i> Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!-- /.table-responsive -->
+                    </div><!-- .panel-body -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

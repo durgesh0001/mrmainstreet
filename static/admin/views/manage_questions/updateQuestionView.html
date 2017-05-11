@@ -1,0 +1,61 @@
+<div class="row" >
+        <div class="col-md-12">
+            <div class="hpanel">
+                <div class="panel-body">
+                    <div class="row">
+                        <form role="form" name="add_questions_form" novalidate="novalidate" ng-submit="manageUpdate(add_questions_form,question);">
+                            <div class="field-box col-md-12">
+                                <div class="field-box-title"><h4>Question Information</h4></div>
+                                <div class="row">
+                                    <div class="form-group col-md-2 col-sm-2" ng-if="question.question_order > 6">
+                                        <label class="col-md-12">Category:</label>
+                                        <div class="col-md-12">
+                                                <select name="category" ng-model="question.categorytype" class="form-control" required>
+                                                    <option value="">Select</option>
+                                                    <option value="1">Non - Startup</option>
+                                                    <option value="2">Credit Products</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-4" >
+                                        <label class="col-md-12">Questions:</label>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control" ng-model="question.question_text" name="question_text" rows="3" required></textarea>
+                                        </div>
+                                    </div>
+                                     <div class="form-group col-md-4 col-sm-4" >
+                                        <label class="col-md-12">Display Text:</label>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control" ng-model="question.display_text" name="display_text" rows="3" required></textarea>
+                                        </div>
+                                    </div>
+                                    <i class="clear">&nbsp;</i>
+                                    <div class="form-group col-md-2 col-sm-2" ng-if="question.question_order > 6">
+                                        <label class="col-md-12">Response Type:</label>
+                                        <div class="col-md-12">
+                                                <select name="question_type" ng-model="question.question_type" class="form-control" required>
+                                                    <option value="">Select</option>
+                                                    <option value="1">Open Ended</option>
+                                                    <option value="2">Discrete</option>
+                                                    <option value="3">Ratio</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-3 col-sm-3" ng-if="((question.question_type == '2')||(question.question_type == '3')) && (question.question_order > 6)" >
+                                        <label class="col-md-12">Response:</label>
+                                        <div class="col-md-12">
+                                            <textarea class="form-control"  ng-model="question.response" name="response" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.field-box -->
+                            <div class="button-block right col-md-12">
+                                <button title="Add" type="submit" class="btn btn-primary btn-mrn"><i class="fa fa-plus"></i>Update</button>
+                                <button title="Cancel" type="button" ng-click="close()" class="btn btn-primary btn-mrn"><i class="fa fa-times"></i>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </div>
