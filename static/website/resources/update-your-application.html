@@ -1,0 +1,232 @@
+<div ng-include='"static/website/resources/header.html"'></div>
+<div class="container" ng-controller="DashboardCtrl as dCtrl">
+    <div class="dashboard-wrapper wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="row">
+            <div class="col-md-2 col-md-4 sidebar-nav">
+                <span class="sidebar-heading">Funding Status</span>
+                <ul class="nav nav-tabs tabs-left">
+                    <li><a href="#myapplications" data-toggle="tab">My Applications</a></li>
+                    <li class="active"><a href="#updateapplication" data-toggle="tab">Update Your Application</a></li>
+                    <span class="sidebar-heading">Loan Product Info</span>
+                    <li><a href="#startupfinancing" data-toggle="tab">Startup Financing</a></li>
+                    <li><a href="#termloan" data-toggle="tab">Term Loan</a></li>
+                    <li><a href="#businesscredit" data-toggle="tab">Business Line of Credit</a></li>
+                    <li><a href="#merchantadvance" data-toggle="tab">Merchant Cash Advance</a></li>
+                    <li><a href="#invoicefinancing" data-toggle="tab">Invoice Financing</a></li>
+                    <li><a href="#personalloan" data-toggle="tab">Personal Loan</a></li>
+                    <li><a href="#equipmentfinancing" data-toggle="tab">Equipment Financing</a></li>
+                    <li><a href="#hardlending" data-toggle="tab">Hard Money Lending</a></li>
+                    <li><a href="#businessrelief" data-toggle="tab">Business Debt Relief</a></li>
+                    <li><a href="#creditrepair" data-toggle="tab">Credit Repair</a></li>
+                </ul>
+            </div>
+            <!-- /.sidebar-nav -->
+            <div class="col-md-10 col-sm-10 content-area">
+                <div class="content-inner">
+                    <div class="tab-content fadeInDown wow" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="tab-pane active" id="myapplications">
+                            <div class="tab-heading"><i class="mm-icon mm-cong-option"></i> Congratulations, you have 3
+                                loan options!
+                            </div>
+                            <div class="table-responsive">
+                                <div class="panel">
+                                    <table class="table">
+                                        <tr>
+                                            <td class="table-header">Eligible Financing</td>
+                                            <td colspan="4" class="font-16x">These applications do NOT affect your
+                                                credit score in any way
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="website/public/images/dashboard/ondeck.jpg" alt=""></td>
+                                            <td class="w200">Term Loan</td>
+                                            <td>[...]</td>
+                                            <td></td>
+                                            <td class="text-right w344">
+                                                <a class="btn btn-outline btn-green"><i class="fa fa-check"></i>
+                                                    Application sent</a>
+                                           <div ng-include='"static/website/resources/footer.html"'></div>
+     <a class="btn btn-outline btn-green"><i class="fa fa-check"></i> Intro
+                                                    email sent</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="website/public/images/dashboard/bluevine.jpg" alt=""></td>
+                                            <td>Line of Credit</td>
+                                            <td class="price-field"><span class="font-b">$5,000 to $100,000</span><span
+                                                    class="loan-g">Loan Amount</span></td>
+                                            <td><span class="font-b">16% to 62%</span><br><span
+                                                    class="loan-g">APR</span></td>
+                                            <td class="text-right w344">
+                                                <a class="btn btn-outline btn-green"><i class="fa fa-check"></i>
+                                                    Application sent</a>
+                                                <a class="btn btn-outline btn-green"><i class="fa fa-check"></i> Intro
+                                                    email sent</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="website/public/images/dashboard/citizensbank.gif" alt=""></td>
+                                            <td class="w200">Line of Credit</td>
+                                            <td class="price-field"><span class="font-b">$5,000 to $100,000</span><span
+                                                    class="loan-g">Loan Amount</span></td>
+                                            <td><span class="font-b">16% to 62%</span><br><span
+                                                    class="loan-g">APR</span></td>
+                                            <td class="text-right w344">
+                                                <a class="btn btn-outline btn-green"><i class="fa fa-check"></i>
+                                                    Application sent</a>
+                                                <a class="btn btn-outline btn-green"><i class="fa fa-check"></i> Intro
+                                                    email sent</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div><!-- /.panel -->
+                                <div class="panel">
+                                    <table class="table">
+                                        <tr>
+                                            <td colspan="4" class="table-header">Credit Score Counseling & Repair</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><img src="website/public/images/dashboard/lexingtonlaw.jpg"
+                                                                 alt=""></td>
+                                            <td class="loan-g">Improving your FICO will provide you wih access to<br/>more
+                                                financing at lower rates
+                                            </td>
+                                            <td class="w344"><a class="btn btn-primary click-i-btn" title="CLICK to improve FICO by 50+ points<br>
+over 6 months">CLICK to improve FICO by 50+ points<br>
+                                                over 6 months</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-header">Future Financing Options</td>
+                                            <td class="w200 f-16x f-w400">Your FICO: 650</td>
+                                            <td class="f-16x f-w400">Required FICO for the options below: 700+</td>
+                                            <td class="w344"><a href="#" class="lock-btn click-i-btn" title="Locked"><i
+                                                    class="lock-icon"></i>Locked</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="website/public/images/dashboard/fundingcircle.jpg" alt=""></td>
+                                            <td class="w200">Term Loan</td>
+                                            <td>[...]</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </div><!-- /.panel -->
+                                <div class="panel">
+                                    <table class="table">
+                                        <tr>
+                                            <td colspan="4" class="table-header">Business Debt Relief</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="website/public/images/dashboard/corporate.jpg" alt=""/></td>
+                                            <td class="w200">&nbsp;</td>
+                                            <td class="loan-g">Debt negotiators can help you decrease your loan <br>
+                                                balances by as much as 85% when you’re facing a<br> cash crunch
+                                            </td>
+                                            <td class="text-right w344"><a
+                                                    title="CLICK for business debt &amp; cash advance relief"
+                                                    class="btn btn-primary click-i-btn">CLICK for business debt &amp;
+                                                cash
+                                                <br>advance relief</a></td>
+                                        </tr>
+                                    </table>
+                                </div><!-- /.panel -->
+                            </div><!-- /.table-responsive -->
+                        </div><!-- /.tab-pane -->
+                        <div class="tab-pane active" id="updateapplication">
+                            <form>
+                                <table class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                    <tr class="table-header-application">
+                                        <th>#</th>
+                                        <th>Questions</th>
+                                        <th>Your Answers</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>How much funding are you looking for?</td>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>How old is your business?</td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>3 - 6 Month</option>
+                                                <option>6 - 12 Month</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>Loan Purpose</td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Working Capital</option>
+                                                <option>Working Capital 1</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>Credit Score</td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Excellent (600 - 699)</option>
+                                                <option>Excellent (699 - 799)</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td>What were your total sales last year?</td>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>What was your average monthly sales over the last three months?</td>
+                                        <td><input type="text" class="form-control"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td>Do you invoice your business customers?</td>
+                                        <td class="radio-button">
+                                            <label><input type="radio" name="yes"> Yes</label>
+                                            <label><input type="radio" name="yes"> No</label>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="note-line"><span>You may update application 3 times every 30 days. You Have updated your app (n)/3 times</span>
+                                    <a href="#" title="Submit" class="btn btn-primary pull-right">Submit</a><i
+                                            class="clear"></i></p>
+                            </form>
+                        </div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="startupfinancing">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="termloan">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="businesscredit">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="merchantadvance">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="invoicefinancing">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="personalloan">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="equipmentfinancing">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="hardlending">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="businessrelief">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                        <div class="tab-pane" id="creditrepair">Content Coming here...</div>
+                        <!-- /.tab-pane -->
+                    </div>
+                </div><!-- /.content-inner -->
+            </div><!-- /.content-area -->
+        </div>
+    </div><!-- /.dashboard-wrapper -->
+</div><!-- /.container -->
+<div ng-include='"static/website/resources/footer.html"'></div>

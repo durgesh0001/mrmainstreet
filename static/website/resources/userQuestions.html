@@ -1,0 +1,77 @@
+<div ng-controller="HomeCtrl as hCtrl">
+<div class="model-head text-center" ng-if="hCtrl.isDailog">See your loan options in seconds.</div>
+<li class="nav-dots"  ng-if="hCtrl.isShow">
+      <label class="nav-dot" ng-class="{ 'nav-dot-active': hCtrl.questions[0].is_show}"></label>
+      <label class="nav-dot" ng-class="{ 'nav-dot-active': hCtrl.questions[1].is_show}"></label>
+      <label class="nav-dot" ng-class="{ 'nav-dot-active': hCtrl.questions[2].is_show}"></label>
+      <label class="nav-dot" ng-class="{ 'nav-dot-active': hCtrl.questions[3].is_show}"></label>
+      <label class="nav-dot" ng-class="{ 'nav-dot-active': hCtrl.questions[4].is_show}"></label>
+      <label class="nav-dot" ng-class="{ 'nav-dot-active': hCtrl.questions[5].is_show}"></label>
+      <label class="nav-dot" ng-class="{ 'nav-dot-active': hCtrl.questions[6].is_show}"></label>
+    </li>
+<div class="funding-block question-continue">
+    <!--   question 1 start -->
+    <div ng-repeat="question in hCtrl.questions" ng-if="question.is_show">
+        <span class="form-punch-line"><% question.question %></span>
+        <form name="questionForm" novalidate ng-submit="hCtrl.nextStep(question.number)">
+            <div class="form-group"
+                 ng-if="((question.number == 1) || (question.number == 2) || (question.number == 3))">
+                <select ng-if="((question.number == 1) || (question.number == 3))" class="form-control"
+                        ng-model="hCtrl.questions[$index].value" required name="question1235">
+                    <option ng-repeat="value in question.data"><% value %></option>
+                </select>
+                <select ng-if="((question.number == 2))" class="form-control" ng-model="hCtrl.questions[$index].value"
+                        required name="question2">
+                    <option ng-repeat="value in question.data"><% value.purpose_name %></option>
+                </select>
+            </div>
+            <div class="form-group"
+                 ng-if="((question.number == 0))">
+                <input type="text"   class="form-control" ng-model="hCtrl.questions[$index].value" ui-money-mask
+                       name="question0" placeholder="$ <% question.display_text %>" min="5000" max="5000000" required>
+
+            </div>
+               <div class="form-group"
+                 ng-if="((question.number == 4) || (question.number == 5))">
+                <input type="text"   class="form-control" ng-model="hCtrl.questions[$index].value" ui-money-mask
+                       name="question45" placeholder="$ <% question.display_text %>" required>
+            </div>
+            <div class="form-group" ng-if="((question.number == 6))">
+                <label class="radio-inline">
+                    <input type="radio" name="question6" ng-model="hCtrl.questions[$index].value" ng-value="true">
+                    <span>Yes </span>
+                </label>&emsp;
+                <label class="radio-inline">
+                    <input type="radio" name="question6" ng-model="hCtrl.questions[$index].value"
+                           ng-value="false"><span>No</span>
+                </label>
+            </div>
+            <div ng-if="((question.number == 7))">
+                <div ng-include='"static/website/resources/loadingPage.html"'></div>
+                <button type="submit" class="btn btn-primary next-step">Continue
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                <i class="clear"></i>
+            </div>
+            <div ng-if="((question.number == 8))">
+                <div ng-include='"static/website/resources/userRegistration.html"'></div>
+            </div>
+            <div class="button-group"
+                 ng-if="((question.number == 0)||(question.number == 1) || (question.number == 2) || (question.number == 3) || (question.number == 4) || (question.number == 5) || (question.number == 6))">
+                <button type="submit" class="btn btn-primary next-step">Continue
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                <i class="clear"></i>
+                <button type="button" ng-if="((question.number == 1) || (question.number == 2) || (question.number == 3) || (question.number == 4) || (question.number == 5) || (question.number == 6))" ng-click="hCtrl.previousStep(question.number)" class="btn prev-step"><i
+                        class="fa fa-long-arrow-left" aria-hidden="true"></i> Back</button>
+            </div>
+            <div class="button-group" ng-if="((question.number == 8))">
+                <button type="submit" class="btn btn-primary next-step">SignUp
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <p class="already-in" ng-if="hCtrl.routeName == 'applyNow'"><a href="/#/login">Already have an account? Log
+                in.</a></p>
+        </form>
+    </div>
+</div>
+</div>
+<!--   question 1 end -->
+

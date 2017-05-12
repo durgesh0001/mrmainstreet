@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="mmstreet">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title set in pageTitle directive -->
+    <title page-title></title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/angular-notify/angular-notify.min.css" />
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/ng-table/ng-table.min.css">
+    <link rel="stylesheet" href="vendor/toaster/toaster.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/style.css -->
+    <!-- <link rel="stylesheet" href="styles/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="styles/fonts/pe-icon-7-stroke/css/helper.css" /> -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- endbuild -->
+</head>
+<!-- Body -->
+<!-- appCtrl controller with serveral data used in theme on diferent view -->
+<body class="{{$state.current.data.specialClass}} fixed-navbar">
+<!-- Simple splash screen-->
+<div class="splash"><div class="color-line"></div><div class="splash-title"><h1>Mr. Main Street</h1>
+<img src="images/loading-bars.svg" width="64" height="64" /> </div> </div>
+<!--[if lt IE 7]>
+<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Page view wrapper -->
+<div class="uiview" ui-view></div>
+<!-- build:js(.) scripts/vendor.js -->
+<script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular-ui-router/angular-ui-router.min.js"></script>
+<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="vendor/metisMenu/metisMenu.min.js"></script>
+<script src="vendor/iCheck/icheck.min.js"></script>
+<script src="vendor/angular-notify/angular-notify.min.js"></script>
+<script src="vendor/angular-auto-validate/jcs-auto-validate.js"></script>
+<script src="vendor/toaster/toaster.js"></script>
+<script src="https://cdn.jsdelivr.net/angular.ngtable/1.0.0/ng-table.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/mmstreet.js"></script>
+<script src="scripts/mmstreet.app.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/directives/directives.js"></script>
+<!-- endbuild -->
+<!-- mmstreet Factories -->
+<script src="scripts/factories/utils.factory.js"></script>
+<!-- User Factories -->
+<script src="scripts/factories/users/user.factory.js"></script>
+<!-- Lenders Factories -->
+<script src="scripts/factories/manage_lenders/lenders.factory.js"></script>
+<!-- Questions Factories -->
+<script src="scripts/factories/manage_questions/questions.factory.js"></script>
+<!-- Reporting Factories -->
+<script src="scripts/factories/reporting/reporting.factory.js"></script>
+  <!-- Common Controllers -->
+<script src="scripts/controllers/mmstreet.controller.js"></script>
+<!-- Login Controllers -->
+<script src="scripts/controllers/admin/login.controller.js"></script>
+<!-- Reset Controllers -->
+<script src="scripts/controllers/admin/reset.controller.js"></script>
+<!-- User Controllers -->
+<script src="scripts/controllers/users/user.controller.js"></script>
+<!-- Lenders Controllers -->
+<script src="scripts/controllers/manage_lenders/lenders.controller.js"></script>
+<!-- Questions Controllers -->
+<script src="scripts/controllers/manage_questions/questions.controller.js"></script>
+<!-- Reporting Controllers -->
+<script src="scripts/controllers/reporting/reporting.controller.js"></script>
+</body>
+</html>

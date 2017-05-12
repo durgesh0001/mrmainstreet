@@ -1,0 +1,65 @@
+{% load staticfiles %}
+
+<html ng-app="mrmainstreet" ng-controller="mrmainstreetCtrl as mainController">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+   <base href="/">
+    <title>Mr. Main Street</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <!-- Bootstrap -->
+     <!-- mmstreet utilities css -->
+     <link href="{% static 'website/public/css/bootstrap.min.css' %}" rel="stylesheet">
+     <link rel="stylesheet" href="{% static 'website/public/css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'website/public/css/animate.css' %}">
+     <link href="{% static 'website/public/css/style.css' %}" rel="stylesheet" />
+     <link rel="stylesheet" href="{% static 'website/public/css/ng-notify.min.css' %}">
+     <link rel="stylesheet" href="{% static 'website/public/css/sweet-alert.css' %}">
+     <link rel="stylesheet" href="{% static 'website/public/ngdialog/css/ngDialog.css' %}">
+     <link rel="stylesheet" href="{% static 'website/public/ngdialog/css/ngDialog-theme-default.css' %}">
+    <!--  website -->
+
+</head>
+<body class="<% mainController.bodyClasses %>">
+        <!--<div loading></div>-->
+         <div ui-view autoscroll="true"></div>
+</body>
+<!-- mmstreet angular -->
+<script src="{% static 'website/public/vendor/angular-1.5.3/angular.js' %}"></script>
+<script src="{% static 'website/public/vendor/angular-1.5.3/angular-animate.js' %}"></script>
+<script src="{% static 'website/public/vendor/angular-1.5.3/angular-resource.js' %}"></script>
+<script src="{% static 'website/public/vendor/angular-1.5.3/angular-messages.min.js' %}"></script>
+<script src="{% static 'website/public/vendor/angular-1.5.3/angular-sanitize.min.js' %}"></script>
+<script src="{% static 'website/public/vendor/angular-ui-router/angular-ui-router.min.js' %}"></script>
+
+<!-- mmstreet auto validate -->
+<script src="{% static 'website/public/vendor/jcs-auto-validate.js' %}"></script>
+
+<!-- mmstreet factories, controller,modules -->
+<script src="{% static 'website/public/scripts/mrmainstreet.app.js' %}"></script>
+<script src="{% static 'website/public/scripts/factories/mrmainstreet.factory.js' %}"></script>
+<script src="{% static 'website/public/scripts/controllers/mrmainstreet.controller.js' %}"></script>
+<script src="{% static 'website/public/scripts/directives/directives.js' %}"></script>
+<script src="{% static 'website/public/scripts/site.js' %}"></script>
+<script src="{% static 'website/public/scripts/factories/site/site.factory.js' %}"></script>
+<script src="{% static 'website/public/scripts/controllers/site/site.controller.js' %}"></script>
+<script src="{% static 'website/public/scripts/factories/site/userDashboard.factory.js' %}"></script>
+<script src="{% static 'website/public/scripts/controllers/site/userDashboard.controller.js' %}"></script>
+
+<!-- mmstreet utilities -->
+<script src="{% static 'website/public/js/ng-notify.min.js' %}"></script>
+<script src="{% static 'website/public/js/sweet-alert.min.js' %}"></script>
+<script src="{% static 'website/public/js/ng-sweet-alert.js' %}"></script>
+<script src="{% static 'website/public/js/angular-base64.js' %}"></script>
+<script src="{% static 'website/public/js/angular-input-masks-standalone.js' %}"></script>
+<script src="{% static 'website/public/ngdialog/js/ngDialog.js' %}"></script>
+
+
+<!-- mmstreet others -->
+<script src="{% static 'website/public/js/jquery-2.1.1.min.js' %}"></script>
+<script src="{% static 'website/public/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'website/public/js/wow.min.js' %}"></script>
+<script src="{% static 'website/public/js/functions.js' %}"></script>
+</html>

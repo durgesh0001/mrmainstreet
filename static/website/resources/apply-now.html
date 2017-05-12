@@ -1,0 +1,55 @@
+<div ng-include='"static/website/resources/header.html"'></div>
+
+<div class="apply-now">
+    <section id="main-slider" class="no-margin banner-section">
+        <div class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-12 col-md-10 center-block pull-none col-xs-12">
+                                <div class="carousel-content">
+                                                 <div ng-include='"static/website/resources/userQuestions.html"'></div>
+                                </div><!-- /.carousel-content -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+    </section><!--/#main-slider-->
+<!-- Step Form Modal-->
+<div class="modal fade" id="step-form-modal" tabindex="-1" role="dialog" aria-labelledby="stepLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="stepLabel">See your loan options in seconds.</h4>
+      </div>
+      <div class="modal-body">
+        <div class="funding-block">
+            <span>When did you start your business?</span>
+            <form>
+                <div class="form-group">
+                    <select class="form-control">
+                    	<option>Just Starting Up</option>
+                    	<option>Just Starting Up1</option>
+                    	<option>Just Starting Up2</option>
+                    	<option>Just Starting Up3</option>
+                    	<option>Just Starting Up4</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn btn-primary next-step">Continue <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    <i class="clear"></i>
+                    <button type="button" class="btn prev-step"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div ng-include='"static/website/resources/footer.html"'></div>

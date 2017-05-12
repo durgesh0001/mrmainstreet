@@ -1,0 +1,202 @@
+<div class="row">
+  <div class="col-lg-12 text-center m-t-md">
+    <div class="content" animate-panel effect="zoomIn">
+        <!-- <table ng-table="ulCtrl.IPMHubTableParams" class="table  table-bordered table-striped" show-filter="false">
+          <tr ng-repeat="user in $data">
+            <td title="'S.No'" class="text-center" width="1%">{{ $index+1 }}</td>
+            Landing page
+            Landing time
+            Sign-up time
+            Client first name
+            Client last name
+            Mobile phone
+            Client email
+
+            Primary Questions/Answers
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+
+            Opt-In
+            Credit repair
+            Debt relief
+
+            Seek
+            Torro
+            Fund&amp;Grow
+            Funding circle
+            OnDeck
+            By LOC
+            BV fact
+            Rapid Adv
+            National
+            BFS
+            SFS
+            Yellow stone
+            Pearl
+            Everest
+            Cresthill
+
+            <td title="'Action'" class="text-center" width="1%">
+              <div class="btn-group">
+                <a id="dLabel" data-target="#" href="javascript:void(0);" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="fa fa-bars"></i><span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li><a ui-sref="users.view-user" href="javascript:void(0);" ng-click="ulCtrl.getUserDetail(user.Id)" title="View"><i class="fa fa-eye"></i> View</a></li>
+                  <li><a ui-sref="users.manage-user"  ng-click="ulCtrl.getUserDetail(user.Id)" title="Edit"><i class="fa fa-edit"></i> Edit</a></li>
+                  <li><a class="option delete" href="javascript:void(0);" ng-click="ulCtrl.deleteUser(user.Id)" title="Delete"><i class="fa fa-trash"></i> Delete</a></li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </table> -->
+
+        <div class="row" ng-controller="ReportingListCtrl as reportingData">
+  <div class="col-md-12">
+  <div class="panel-body">
+<form class="text-left m-b20">
+        <div class="form-group col-md-2 col-sm-2">
+        <label class="col-md-12 p-l0">User Report:</label>
+            <select class="form-control">
+                <option value="">Select</option>
+                <option value="1">Report 1</option>
+                <option value="2">Report 1</option>
+                <option value="3">Report 1</option>
+                <option value="4">Report 1</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2 col-sm-2">
+        <label class="col-md-12">From Date:</label>
+           <div class="col-md-12" ng-controller="DatepickerCtrl">
+                     <p class="input-group">
+                      <input type="text" readonly="readonly" class="form-control"  uib-datepicker-popup="dd-MM-yy" show-weeks="false" ng-model-options="{timezone:'UTC'}" show-button-bar="false" ng-model="dt" is-open="opened" min-date="minDate"
+                      max-date="'2019-06-22'" datepicker-options="dateOptions"
+                      ng-required="true" close-text="Close"/>
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event)"><i
+                          class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                      </p>
+                    </div>
+            <!-- <select class="form-control">
+                <option value="">From Date</option>
+                <option value="1">Report 1</option>
+                <option value="2">Report 1</option>
+                <option value="3">Report 1</option>
+                <option value="4">Report 1</option>
+            </select> -->
+        </div>
+        <div class="form-group col-md-2 col-sm-2">
+            <!-- <select class="form-control">
+                <option value="">To Date</option>
+                <option value="1">Report 1</option>
+                <option value="2">Report 1</option>
+                <option value="3">Report 1</option>
+                <option value="4">Report 1</option>
+            </select> -->
+            <label class="col-md-12">To Date:</label>
+            <div class="col-md-12" ng-controller="DatepickerCtrl">
+                     <p class="input-group">
+                      <input type="text" readonly="readonly" class="form-control"  uib-datepicker-popup="dd-MM-yy" show-weeks="false" ng-model-options="{timezone:'UTC'}" show-button-bar="false" ng-model="dt" is-open="opened" min-date="minDate"
+                      max-date="'2019-06-22'" datepicker-options="dateOptions"
+                      ng-required="true" close-text="Close"/>
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event)"><i
+                          class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                      </p>
+                    </div>
+        </div>
+        <div class="form-group col-md-2 col-sm-2"><label class="col-md-12">&nbsp;</label><button type="submit" title="Search" class="btn btn-primary btn-mrn"><i class="fa fa-search" aria-hidden="true"></i> Search</button></div>
+</form>
+<i class="clear">&nbsp;</i>
+    <div class="table-responsive">
+    <table ng-table="reportingData.mmstreetTableParams" class="table table-bordered table-hover" show-filter="true">
+        <tr ng-repeat="reporting in $data"> 
+         <!--  <td width="1%">
+            <input icheck type="checkbox" ng-model="userscheck">
+          </td> -->
+            <td title="'Sign-Up Date'"  nowrap="true" filter="{sign_up_date: 'text'}" sortable="'sign_up_date'">
+                {{reporting.sign_up_date}}</td>
+              <td title="'Client First Name'" filter="{client_first_name: 'text'}" sortable="'client_first_name'">
+                {{reporting.client_first_name}}</td>
+            <td title="'Client Last Name'" filter="{client_last_name: 'text'}" sortable="'client_last_name'">
+                {{reporting.client_last_name}}</td>
+            <td title="'Mobile Phone'" filter="{mobile_phone: 'text'}" sortable="'mobile_phone'">
+                {{reporting.mobile_phone}}</td>
+            <td title="'Client Email'" filter="{client_email: 'text'}" sortable="'client_email'">
+                <a href="mailto:{{reporting.client_email}}">{{reporting.client_email}}</a></td>
+            <td title="'1'" filter="{one: 'text'}" sortable="'primary_QA.one'">
+                {{reporting.primary_QA.one}}</td>
+            <td title="'2'" filter="{two: 'text'}" sortable="'primary_QA.two'">
+                {{reporting.primary_QA.two}}</td>
+            <td title="'3'" filter="{three: 'text'}" sortable="'primary_QA.three'">
+                {{reporting.primary_QA.three}}</td>    
+            <td title="'4'" filter="{four: 'text'}" sortable="'primary_QA.four'">
+                {{reporting.primary_QA.four}}</td>
+            <td title="'5'" filter="{five: 'text'}" sortable="'primary_QA.five'">
+                {{reporting.primary_QA.five}}</td>
+            <td title="'6'" filter="{six: 'text'}" sortable="'primary_QA.six'">
+                {{reporting.primary_QA.six}}</td>
+            <td title="'7'" filter="{seven: 'text'}" sortable="'primary_QA.seven'">
+                {{reporting.primary_QA.seven}}</td>        
+            <td nowrap="true" title="'Credit Repair'" filter="{credit_repair: 'text'}" sortable="'opt_In.credit_repair'">
+                {{reporting.opt_In.credit_repair}}</td>
+            <td nowrap="true" title="'Debt Relief'" filter="{.debt_relief: 'text'}" sortable="'opt_In.debt_relief'">
+                {{reporting.opt_In.debt_relief}}</td>
+            <td nowrap="true" title="'Seek'" filter="{seek: 'text'}" sortable="'qualified_sent.seek'">
+                {{reporting.qualified_sent.seek}}</td>
+            <td nowrap="true" title="'Torro'" filter="{torro: 'text'}" sortable="'qualified_sent.torro'">
+                {{reporting.qualified_sent.torro}}</td>
+            <td nowrap="true" title="'Fund&amp;Grow'" filter="{fundandgrow: 'text'}" sortable="'qualified_sent.fundandgrow'">
+                {{reporting.qualified_sent.fundandgrow}}</td>
+            <td nowrap="true" title="'Funding Circle'" filter="{funding_circle: 'text'}" sortable="'qualified_sent.funding_circle'">
+                {{reporting.qualified_sent.funding_circle}}</td>
+            <td nowrap="true" title="'OnDeck'" filter="{ondeck: 'text'}" sortable="'qualified_sent.ondeck'">
+                {{reporting.qualified_sent.ondeck}}</td>
+            <td nowrap="true" title="'BV LOC'" filter="{bvloc: 'text'}" sortable="'qualified_sent.bvloc'">
+                {{reporting.qualified_sent.bvloc}}</td>
+            <td nowrap="true" title="'BV Fact'" filter="{bvfact: 'text'}" sortable="'qualified_sent.bvfact'">
+                {{reporting.qualified_sent.bvfact}}</td>
+            <td nowrap="true" title="'Rapid Adv'" filter="{rapidadv:'text'}" sortable="'qualified_sent.rapidadv'">
+                {{reporting.qualified_sent.rapidadv}}</td>
+            <td nowrap="true" title="'BFS'" filter="{bfs: 'text'}" sortable="'qualified_sent.bfs'">
+                 {{reporting.qualified_sent.bfs}}</td>
+            <td nowrap="true" title="'SFS'" filter="{sfs: 'text'}" sortable="'qualified_sent.sfs'">
+                {{reporting.qualified_sent.sfs}}</td>
+            <td nowrap="true" title="'Yellowstone'" filter="{yellowstone: 'text'}" sortable="'qualified_sent.yellowstone'">
+                {{reporting.qualified_sent.yellowstone}}</td>
+            <td nowrap="true" title="'Pearl'" filter="{pearl: 'text'}" sortable="'qualified_sent.pearl'">
+            {{reporting.qualified_sent.pearl}}</td>
+            <td nowrap="true" title="'Everest'" filter="{everest: 'text'}" sortable="'qualified_sent.everest'">
+            {{reporting.qualified_sent.everest}}</td>
+            <td nowrap="true" title="'Cresthill'" filter="{cresthill: 'text'}" sortable="'qualified_sent.cresthill'">
+            {{reporting.qualified_sent.cresthill}}</td>
+            <td nowrap="true" title="'Action'" align="center" nowrap="true" width="1%">
+            <div class="btn-group">
+                <a id="dLabel" href="javascript:void(0);" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="fa fa-bars"></i></a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <!-- <li><a href="javascript:void(0)" ui-sref="questions.create" title="View"><i class="fa fa-paste"></i> View</a></li> 
+                    <li><a href="javascript:void(0)" ui-sref="questions.create" title="Edit"><i class="fa fa-pencil"></i> Edit</a></li>-->
+                    <li><a href="javascript:void(0)" title="Delete"><i class="fa fa-trash-o"></i> Delete</a></li>
+                </ul>
+                </div>
+            </td>
+        </tr>
+  </table>
+  </div><!-- /.table-responsive -->
+  <!-- <table ng-table="usersData.mmstreetTableParams" class="table table-bordered table-hover" show-filter="true">
+        <tr ng-repeat="reporting in $data"> 
+            <td title="'Department'" width="10%" filter="{ department: 'text'}" sortable="'department'">
+                {{reporting.department}}</td>
+          </tr>
+  </table> -->
+  </div><!-- .panel-body -->
+  </div>
+</div>
+    </div>
+  </div>
+</div>
